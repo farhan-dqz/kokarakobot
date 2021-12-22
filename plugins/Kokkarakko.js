@@ -6,7 +6,7 @@ const axios = require('axios');
 Asena.addCommand({ on: 'text', fromMe: false,onlyPm: true }, (async (message, match) => {
 
     var r_text = new Array();
-    r_text[0] = Config.IMG;
+    r_text[0] = "https://i.imgur.com/cNpMNKX.jpeg";
     var i = Math.floor(1 * Math.random())
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
