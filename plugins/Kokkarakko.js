@@ -5,46 +5,42 @@ const axios = require('axios');
 
 Asena.addCommand({ on: 'text', fromMe: false,onlyPm: true }, (async (message, match) => {
 
-    var r_text = new Array();
-    r_text[0] = Config.IMG;
-    var i = Math.floor(1 * Math.random())
+    var blaah = await axios.get(Config.IMG, { responseType: 'arraybuffer' })
 
-    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+    let T1Julie = new RegExp('.')
+    let T2Julie = new RegExp('a')
+    let T3Julie = new RegExp('e')
+    let T4Julie = new RegExp('i')
+    let T5Julie = new RegExp('o')
+    let T6Julie = new RegExp('u')
 
-    let regexb1Julie = new RegExp('.')
-    let regexb2Julie = new RegExp('a')
-    let regexb3Julie = new RegExp('e')
-    let regexb4Julie = new RegExp('i')
-    let regexb5Julie = new RegExp('o')
-    let regexb6Julie = new RegExp('u')
-
-    if (regexb1Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    if (T1Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
-    else if (regexb2Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    else if (T2Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
-    else if (regexb3Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    else if (T3Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
-    else if (regexb4Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    else if (T4Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
-    else if (regexb5Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    else if (T5Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
-    else if (regexb6Julie.test(message.message)) {
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+    else if (T6Julie.test(message.message)) {
+        await message.sendMessage(Buffer.from(blaah.data), MessageType.image, {
         mimetype: Mimetype.png, caption: Config.TEXT})
         
     }
